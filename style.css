@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.container{
+    background-color: aquamarine;
+    border-radius: 20px;
+    border: 2px solid black;
+    width: 60%;
+    height: 250px;
+    margin: 190px 325px;
+    
+}
+
+table{
+    position: relative;
+    top: 20px;
+    left: 150px;
+}
+th{
+    text-align: center;
+    text-decoration: underline;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    color: rgb(245, 42, 76);
+}
+input{
+   height: 30px;
+   width: 250px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: medium;
+   border-radius: 20px;
+   margin: 10px;
+}
+label{
+    height: 30px;
+    width: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    border-radius: 20px;
+    font-weight: bold;
+    color: rgb(245, 42, 76);
+    padding: 20px;
+    margin: 10x;
+}
+input::placeholder{
+text-align: center;
+}
+#mybtn{
+    width: 200px;
+    height: 25px;
+    border-radius: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    background-color: aliceblue;
+    margin: 20px;
+    position: absolute;
+    left: 100px;
+    font-weight: bold;
+ }
+ #mybtn:hover {
+    background-color: #f12c46;
+    
+  }

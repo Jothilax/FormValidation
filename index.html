@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormValidation</title>
+    <link rel="stylesheet" href="style.css">
+    <script >
+//         let data = document.getElementById("mybtn");
+   
+//    data.addEventListener("click",function(e){
+//       e.preventDefault();
+//       console.log("data validation");
+//       const NAME_REQUIRED="Please enter the name";
+//       const ROLNO_REQUIRED="Please enter the rollno";
+
+    function datavalidation(){
+      let name=document.myForm.name.value;
+      console.log(name);
+      let rol=document.myForm.roll.value;
+      console.log(rol);
+      console.log(name.length);
+      console.log(rol.length);
+
+      
+        if(name.trim()==="" && rol.trim()===""){
+            document.getElementById("sname").innerHTML="Name should not be empty";
+            document.getElementById("rolno").innerHTML="RollNo should not be empty";
+          console.log("Name should not be empty");
+          return false; 
+      }else if(name.length <= 6){
+          document.getElementById("sname").innerHTML="Name should be atleast 6 character long";
+          document.getElementById("rolno").innerHTML="";
+          console.log("Name should be atleast 6 character long");
+          return false; 
+      }else if(rol.length <= 6){
+          document.getElementById("sname").innerHTML="";
+          document.getElementById("rolno").innerHTML="RollNo must be atleast 6 digits long";
+          console.log("RollNo must be atleast 6 digits long");
+          return false; 
+      }else if(isNaN(rol)){
+          document.getElementById("sname").innerHTML="";
+          document.getElementById("rolno").innerHTML="Roll No must be in numbers";
+          console.log("Roll No must be in numbers");
+          return false; 
+      }else{
+          // document.getElementById("sname").innerHTML="";
+          // document.getElementById("rolno").innerHTML="";
+          console.log("Success");
+          return true; 
+      }
+      }
+     
+  // });
+   // data.click();
+   
+   </script>
+</head>
+<body>
+    <div class="container">
+    
+    <form   name="myForm" action="output.html"   onsubmit="return datavalidation()" method="post">
+    <table>
+        <tr>
+            <th colspan="2">Student Login</th>
+        </tr>
+        <tr>
+            <td>
+              <label for="sname">Name</label>
+            </td>
+            <td>
+                <input type="text" name="name" value="" placeholder="Enter your Name"  />
+                <small id="sname"></small>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="rol">RollNo</label>
+            </td>
+            <td>
+                <input type="text" name="roll"  value="" placeholder="Enter your RollNo"  />
+                <small id="rolno"></small>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <input type="submit"  value="Submit" id="mybtn" />
+            </td>
+        </tr>
+    </table>
+</form >
+    </div>
+</body>
+
+</html>
